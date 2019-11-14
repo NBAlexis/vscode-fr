@@ -16,7 +16,11 @@ Support a (\*f title \*)   (\* f\*) folding.
 
 ## Install
 
-For windows user, copy the files to /username/.vscode/extentions/vscode-fr/ should work
+For windows user, copy the files to [c://]users/[username]/.vscode/extentions/vscode-fr/ should work
+
+This is published at:
+
+https://marketplace.visualstudio.com/items?itemName=LiaoningNormalUniversity.VSCodeFeynRules
 
 ## Known Issues
 
