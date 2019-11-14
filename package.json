@@ -5,6 +5,7 @@
     "description": "Syntax highlight for FeynRules",
     "version": "0.0.1",
     "author": "NBAlexis <yangjichong@fudan.edu.cn>",
+    "publisher": "LiaoningNormalUniversity",
     "engines": {
         "vscode": "^1.40.0"
     },
