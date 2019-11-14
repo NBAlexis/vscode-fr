@@ -1,0 +1,93 @@
+{
+    "For Loop": {
+      "prefix": ["For"],
+      "body": [
+          "For [i=1,i<$1,i++;\n", 
+            "\t$0", 
+            "]\n"
+        ],
+      "description": "A For loop."
+    },
+
+    "If Block": {
+        "prefix" : ["If"],
+        "body": ["If[$1, $0, ]"],
+        "description": "A If block."
+    },
+
+    "Function Block": {
+        "prefix" : ["Block"],
+        "body": [
+            "Block [{},\n", 
+                "\t$0", 
+                "]\n"
+        ],
+        "description": "A Function block."
+    },    
+
+    "InfosAuto" : {
+        "prefix" : ["M\\$Information"],
+        "body" : [
+            "M\\$Information = {",
+            "\tAuthors -> {\"$0\"},",
+            "\tVersion -> \"1.0\",",
+            "\tDate -> \"$1\",",
+            "\tInstitutions -> {\"$2\"},",
+            "\tEmails -> {\"$3@.edu.cn\"},",
+            "\tReferences -> \"$4\"",
+            "};\n"
+        ],
+        "description": "auto finish M\\$Information block."
+    },
+
+    "ParamtersAuto" : {
+        "prefix" : ["ParameterType"],
+        "body" : [
+            "ParameterType -> $0,",
+            "TeX -> $1,",
+            "InteractionOrder -> {},",
+            "Value -> $2,",
+            "Description -> \"$3\""
+        ],
+        "description": "auto finish Parameter block."
+    },
+    
+    "GaugeGroupAuto" : {
+        "prefix" : ["Abelian"],
+        "body" : [
+            "Abelian -> $0,",
+            "CouplingConstant -> $1,",
+            "GaugeBoson -> $2,",
+            "Charge -> $3,",
+            "StructureConstant -> $4",
+            "Representations -> {$5}"
+        ],
+        "description": "auto finish GaugeGroup block."
+    }, 
+    
+    "ParticlesAuto" : {
+        "prefix" : ["ClassName"],
+        "body" : [
+            "ClassName -> $0,",
+            "SelfConjugate -> ,",
+            "Mass -> ,",
+            "Width -> ,",
+            "Indices -> {Index[]},",
+            "ParticleName -> \"\"",
+            "PDG -> ",
+            "PropagatorLabel -> \"\"",
+            "PropagatorType -> ",
+            "PropagatorArrow -> ",
+            "FullName -> \"\""
+        ],
+        "description": "auto finish Particle block."
+    },
+    
+    "FeynGaugeAuto" : {
+        "prefix" : ["feynmangaugerules ="],
+        "body" : [
+            "feynmangaugerules = If[Not[FeynmanGauge], {G0|GP|GPbar ->0}, {}];\n"
+        ],
+        "description": "auto finish FeynGauge."
+    }     
+  }

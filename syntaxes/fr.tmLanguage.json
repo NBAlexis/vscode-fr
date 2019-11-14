@@ -1,0 +1,125 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FeynRules",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		}		
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.fr",
+					"match": "\\b(If|While|For|Return|Block|Not|Module)\\b"
+				},
+				{
+					"name": "keyword.mathematica",
+					"match": "\\b(Im|Re|Sqrt|Expand|Simplify|Range|Sin|Cos|Conjugate)\\b"
+				},
+				{
+					"name": "keyword.frfunction",
+					"match": "\\b(del|FS|DC|ExpandIndices|Dual|HC|Subscript|Superscript|Index|IndexRange|IndexStyle|Unfold|NoUnfold|CKM|PauliSigma|Ga|Eps|IndexDelta|CKM|IndexDelta)\\b"
+				},				
+				{
+					"name": "entity.name.type.fr",
+					"match": "\\b(M\\$Parameters|M\\$ClassesDescription|M\\$ModelName|M\\$Information|M\\$InteractionOrderHierarchy|FR\\$LoopSwitches|FR\\$RmDblExt|M\\$vevs|M\\$GaugeGroups|M\\$Restrictions|MR\\$Definitions)\\b"
+				},
+				{
+					"include": "#FeynRulesAttributes"
+				},
+				{
+					"include": "#FeynRulesConstant"
+				}													
+			],
+			"repository": {
+				"FeynRulesAttributes" : {
+					"patterns" : [
+						{
+							"name": "entity.name.tag.fr",
+							"match": "\\b(Authors|Version|Date|Institutions|Emails|References|URLs)\\b"
+						},
+						{
+							"name": "entity.name.tag.fr",
+							"match": "\\b(TeX|ParameterType|ParameterName|InteractionOrder|Value|BlockName|Description|OrderBlock|Unitary)\\b"
+						},
+						{
+							"name": "entity.name.tag.fr",
+							"match": "\\b(ClassName|ClassMembers|Goldstone|SelfConjugate|Mass|Width|ParticleName|PDG|PropagatorLabel|PropagatorType|PropagatorArrow|FullName|AntiParticleName|QuantumNumbers|Indices|Ghost|Unphysical|Definitions|FlavorIndex)\\b"
+						},
+						{
+							"name": "entity.name.tag.fr",
+							"match": "\\b(Abelian|CouplingConstant|GaugeBoson|StructureConstant|Representations|Charge|SymmetricTensor)\\b"
+						}																	
+					]
+				},
+				"FeynRulesConstant" : {
+					"patterns" : [
+						{
+							"name": "constant.character.fr",
+							"match": "\\b(I|Pi|True|False|None)\\b"
+						},						
+						{
+							"name": "constant.character.frlabel",
+							"match": "\\b(Internal|External|QED|LOOP|QCD|HIG|NP|ANOINPUTS|SMINPUTS|YUKAWA|SU2D|SU2W|Gluon|Colour|Generation|Sine)\\b"
+						},
+						{
+							"name": "constant.character.property",
+							"match": "\\b(GhostNumber|LeptonNumber|FlavorExpand)\\b"
+						},												
+						{
+							"name": "constant.character.frconstant",
+							"match": "\\b(gs|sw|cw|aEW|Gf|MH|MT|WH|MW|WW|MZ|WZ|vev|v|FeynmanGauge|feynmangaugerules|ee|Forward|Straight)\\b"
+						},
+						{
+							"name": "constant.character.frparticle",
+							"match": "\\b(G0|GP|GPbar|A|W|Wbar|Z|Phi|Phibar|G|H|Wi)\\b"
+						}						
+					]
+				}
+			}				
+		},
+		"strings": {
+			"name": "string.quoted.double.fr",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fr",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.block",
+			"begin": "\\(\\*",
+			"end": "\\*\\)"
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "constant.character.operators",
+					"match": "==="
+				},				
+				{
+					"name": "constant.character.operators",
+					"match": "(\\->|\\:=|\\/\\.|==|\\:>)"
+				},
+				{
+					"name": "constant.character.operators",
+					"match": "[\\[\\]\\{\\}\\(\\)\\+\\-\\*\\/\\^\\|]"
+				}				
+			]
+		}		
+	},
+	"scopeName": "source.fr"
+}

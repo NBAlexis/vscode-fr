@@ -1,0 +1,44 @@
+{
+    "name": "VSCodeFeynRules",
+    "icon": "logo.png",
+    "displayName": "VSCodeFeynRules",
+    "description": "Syntax highlight for FeynRules",
+    "version": "0.0.1",
+    "author": "NBAlexis <yangjichong@fudan.edu.cn>",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NBAlexis/vscode-fr.git"
+    },    
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "fr",
+            "aliases": ["FeynRules", "fr"],
+            "extensions": [".fr",".rst"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fr",
+            "scopeName": "source.fr",
+            "path": "./syntaxes/fr.tmLanguage.json"
+        }],
+        "themes": [
+            {
+              "label": "vs-fr",
+              "uiTheme": "vs-dark",
+              "path": "./themes/fr-color-theme.json"
+            }
+        ],
+        "snippets": [
+            {
+              "language": "fr",
+              "path": "./snippet/fr-snippet.json"
+            }
+          ]             
+    }
+}
