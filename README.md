@@ -12,7 +12,11 @@ A vs-fr theme is also included.
 
 Some auto finish.
 
-Support a (*f title *)   (* f*) folding.
+Support a (\*f title \*)   (\* f\*) folding.
+
+## Install
+
+For windows user, copy the files to /username/.vscode/extentions/vscode-fr/ should work
 
 ## Known Issues
 
